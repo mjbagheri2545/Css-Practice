@@ -1,0 +1,102 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    height : 100vh;
+    background: linear-gradient(45deg,#f1b814,#f52844);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+.card{
+    width: 500px;
+    height: 230px;
+    border-radius: 20px;
+    background-color: #fff;
+    position: relative;
+    box-shadow: 0 15px 20px rgba(0,0,0,0.3);
+    transition: 0.4s;
+}
+.card:hover{
+    height: 500px;
+}
+.imgbox{
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    background-color: black;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20%;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.4);
+    transition: 0.4s;
+
+}
+.card:hover .imgbox{
+    height: 260px;
+    width: 260px;
+}
+.imgbox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.content{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.text{
+    width: 100%;
+    padding: 40px;
+    color: rgb(29, 27, 27);
+    transform: translateY(200px);
+    transition: 0.4s;
+}
+.text h2{
+    font-size: 30px;
+    text-align: center;
+}
+.text h2 span{
+    font-size: 25px;
+    opacity: 0.7;
+}
+.details{
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0px;
+}
+.btn{
+    display: flex;
+    justify-content: space-around;
+}
+.btn button{
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgb(226, 24, 74);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn button:nth-child(2){
+    background-color: rgb(199, 199, 199);
+    color: rgb(29, 27, 27);
+}
+.card:hover .text
+{
+    transform: translateY(0px);
+}
