@@ -1,85 +1,77 @@
-body{
-    margin: 0;
-    padding: 0;
-    height: 833px;
-    background: rgb(13, 1, 34);
+:root
+{
+    font-size: 15px;
+}
+body
+{
+    min-height: 100vh;
+    background-image: linear-gradient(-45deg,#A5036E,#DC3E5E);
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
+    
 }
-.container{
-    display: flex;
+.container
+{
     position: relative;
-    justify-content: center;
-    align-items: center;
-    min-width: 300px;
-}
-.ring{
-    position: relative;
-    width: 150px;
-    height: 150px;
+    width: 8rem;
+    height: 8rem;
     border-radius: 50%;
-    border: 4px solid transparent;
-    margin: -35px;
+    transform: rotate(-36deg);
+    animation: rotation 1.5s linear infinite;
+    animation-play-state: paused;
 }
-h2{
-    position: absolute;
-    color: white;
-    font-size: 30px;
-    top: 150px;
+.container:hover
+{
+    cursor: wait;
+    animation-play-state: running;
 }
-.ring:nth-child(3){
+.container .character
+{
     position: absolute;
-    top: -66.66px;
-    border-top: 4px solid yellow;
-    animation: animate 2s infinite linear;
-}
-.ring::before{
-    content: " ";
-    position: absolute;
-    width: 14px;
-    height: 14px;
+    left: 45%;
+    font-size: 1.2rem;
     border-radius: 50%;
-    left: 125px;
-    top: 15px;
-    box-shadow: 0 0 15px 1px rgba(79, 177, 235, 0.6);
-    box-shadow: 0 0 20px 4px rgba(59, 166, 228, 0.5);
-    box-shadow: 0 0 25px 7px rgba(31, 142, 206, 0.4);
+    font-family: monospace;
+    color: #d68df3;
+    display: inline-block;
+    height: 4rem;
+    transform-origin: bottom center;
 }
-.ring:nth-child(1){
-    border-top: 4px solid purple;
-    animation: rotate 2s infinite linear;
-    animation-delay: -0.3s;
+.container .character:nth-child(2)
+{
+    transform: rotate(12deg);
+    
 }
-.ring:nth-child(2){
-    border-top: 4px solid green;
-    animation: rotate 2s infinite linear;
-    animation-delay: -1.3s;
+.container .character:nth-child(3)
+{
+    transform: rotate(24deg);
+    
 }
-.ring:nth-child(3)::before{
-    background-color: yellow;
-    left: 10px;
+.container .character:nth-child(4)
+{
+    transform: rotate(36deg);
+    
 }
-.ring:nth-child(2)::before{
-    background-color: green;
+.container .character:nth-child(5)
+{
+    transform: rotate(48deg);
+    
 }
-.ring:nth-child(1)::before{
-    background-color: purple;
+.container .character:nth-child(6)
+{
+    transform: rotate(60deg);
+    
 }
-@keyframes rotate{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
+.container .character:nth-child(7)
+{
+    transform: rotate(72deg);
+    
 }
-@keyframes animate{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(-360deg);
+@keyframes rotation 
+{
+    100%
+    {
+        transform: rotate(324deg);
     }
 }
