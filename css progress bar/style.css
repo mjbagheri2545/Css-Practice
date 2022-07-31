@@ -1,0 +1,76 @@
+body
+{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container
+{
+    position: relative;
+    background-color: rgb(206, 206, 206);
+    width: 30%;
+    height: 24px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+.container div
+{
+    position: relative;
+    border-radius: inherit;
+    width: 96%;
+    height: 24px;
+    display: flex;
+    align-items: center;
+}
+.container div .loader
+{
+    border-radius: 8px;
+    width: var(--progwidth);
+    height: 18px;
+    background: linear-gradient(to right,#2193b0,#46c1dd);
+    background-size: var(--backsize);
+}
+.loader-control
+{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 10%;
+    height: 100px;
+    padding: 3px 0;
+}
+.loader-control .increase,
+.loader-control .decrease
+{
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    background-color: green;
+    width: 40%;
+    height: 32%;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.loader-control .decrease
+{
+    clip-path: polygon(50% 100%, 1% 0, 100% 0);
+}
+.loader-control .value,
+.container div .loader-value
+{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: arial;
+}
+.container div .loader-value
+{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    opacity: 0.5;
+}
