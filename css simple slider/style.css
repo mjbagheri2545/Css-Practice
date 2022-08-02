@@ -1,0 +1,46 @@
+body
+{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container
+{
+    width: 100%;
+    height: 500px;
+    text-align: center;
+}
+.container h2
+{
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+.slider
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.slider img
+{
+    width: 375px;
+    height: 250px;
+    margin: 0 15px;
+    transition: all 1s;
+}
+.slider img.active
+{
+    margin: 0 50px;
+    width: 450px;
+    height: 350px;
+}
+.container .icon
+{
+    margin-top: 30px;
+    font-size: 60px;
+    cursor: pointer;
+    color: black;
+}
