@@ -1,0 +1,97 @@
+body
+{
+    margin: 0;
+    background-color: rgb(109, 109, 109);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigator
+{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0px 20px;
+    height: 65px;
+}
+.navigator ul
+{
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.navigator ul li
+{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+}
+.navigator ul li a
+{
+    text-decoration: none;
+    position: relative;
+    color: #000;
+    margin: 0 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.navigator ul li a .nav-item-name
+{
+    display: none;
+    transition: 0.5s;
+    opacity: 0.8;
+    font-weight: 540;
+}
+.navigator ul li a .icon
+{
+    font-size: 24px;
+    opacity: 0.6;
+}
+.navigator ul li a::before
+{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: translateY(3px);
+    filter: blur(3px);
+    transition: 0.5s;
+}
+.navigator ul li a.active
+{
+    background-color: var(--clr);
+    transform: translateY(-20px);
+}
+.navigator ul li a.active .nav-item-name
+{
+    display: inline-block;
+    position: absolute;
+    transform: translateY(35px);
+    font-size: 16px;
+}
+.navigator ul li a.active::before
+{
+    background-color: var(--clr);
+}
+.navigator ul li a.active .icon
+{
+    opacity: 1;
+    color: #fff;
+}
