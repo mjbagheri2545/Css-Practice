@@ -1,0 +1,101 @@
+body
+{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222238;
+}
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 370px;
+    height: 350px;
+    gap: 10px;
+}
+.container .circle
+{
+    position: relative;
+    width: 175px;
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .circle .dot
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: rotate 2s linear forwards;
+}
+
+.container .circle .dot::before
+{
+    content: " ";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 12px;
+    left: 80px;
+    background-color: var(--clrtwo);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--clrtwo),
+    0 0 60px var(--clrtwo);
+}
+.container .circle svg
+{
+    position: relative;
+    width: 175px;
+    height: 175px;
+    transform: rotate(-90deg);
+}
+.container .circle svg circle
+{
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    stroke-width: 4px;
+    stroke-dasharray: 440;
+    stroke: #000;
+    fill: transparent;
+    animation: opct 2s linear forwards;
+    animation-delay: 2s;
+}
+.container .circle svg circle:nth-child(2)
+{
+    stroke: var(--clr);
+    stroke-dashoffset: var(--str);
+    opacity: 0;
+}
+.container .circle span
+{
+    position: absolute;
+    font-size: 20px;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(-10px) translateX(0px);
+    animation: opct 2s linear forwards;
+    animation-delay: 2s;
+}
+.container .circle .text
+{
+    transform: translateY(10px);
+    font-size: 16px;
+}
+
+@keyframes rotate{
+    100%
+    {
+        transform: rotate(calc(3.6deg * var(--rotate)));
+    }
+}
+@keyframes opct{
+    100%
+    {
+        opacity: 1;
+    }
+}
