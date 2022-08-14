@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="clock">
+        <div class="circle">
+            <svg>
+                <circle cx="50%" cy="50%" r="70" />
+                <circle style="--clr:#fd2a72" cx="50%" cy="50%" r="70" class="hr-circle"/>
+            </svg>
+            <div style="--clr:#fd2a72" class="dot hr-dot"></div>
+            <div class="number hr">00</div>
+        </div>
+        <div class="circle">
+            <svg>
+                <circle cx="50%" cy="50%" r="70" />
+                <circle style="--clr:#0e8e0e" cx="50%" cy="50%" r="70" class="min-circle"/>
+            </svg>
+            <div style="--clr:#0e8e0e" class="dot min-dot"></div>
+            <div class="number min">00</div>
+        </div>
+        <div class="circle">
+            <svg>
+                <circle cx="50%" cy="50%" r="70" />
+                <circle style="--clr:#fde700" cx="50%" cy="50%" r="70" class="sec-circle"/>
+            </svg>
+            <div style="--clr:#fde700" class="dot sec-dot"></div>
+            <div class="number sec">00</div>
+        </div>
+        <div class="ampm">am</div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
