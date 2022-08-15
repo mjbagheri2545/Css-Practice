@@ -1,0 +1,103 @@
+body 
+{
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    background-color: #3F4053;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+.menu
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 4px;
+    width: 55px;
+    margin-left: 10px;
+    transition: 0.5s;
+}
+.menu ul
+{
+    margin-top: 75px;
+    margin-bottom: 95px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 55px;
+}
+.menu ul li
+{
+    list-style: none;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.menu ul li a
+{
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+}
+.menu ul li a .icon
+{
+    font-size: 22px;
+    opacity: 0.8;
+}
+.menu ul li a span
+{
+    position: absolute;
+    left: 60px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+}
+.menu ul li a.active
+{
+    background-color: var(--clr);
+    color: #fff;
+    border-radius: 8px;
+    transform: translateX(20px);
+    z-index: 1;
+}
+.menu ul li a.active::before
+{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr);
+    border-radius: 8px;
+    top: 3px;
+    left: -2px;
+    color: #fff;
+    filter: blur(5px);
+}
+.menu ul li a.active span
+{
+    color: var(--clr);
+}
+.hamburger-container.active ~ ul li a.active
+{
+    transform: translateX(8px);
+}
+.hamburger-container.active ~ ul li a span
+{
+    opacity: 1;
+    visibility: visible;
+}
