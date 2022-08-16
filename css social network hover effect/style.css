@@ -26,16 +26,16 @@ body
     align-items: center;
     justify-content: center;
     color: var(--clr);
+    overflow: hidden;
 }
 .container .icon
 {
     font-size: 30px;
-    transition: all 0.35s;
+    transition: all 0.25s;
 }
 .container a:hover,
 .container a:focus
 {
-    background-color: var(--clr);
     top: 0;
     left: 0;
 }
@@ -44,4 +44,22 @@ body
 {
     transform: scale(1.2);
     color: #ffffff;
+}
+.container a::before
+{
+    content: " ";
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    background-color: var(--clr);
+    border-radius: 10px;
+    left: -110%;
+    top: 90%;
+    transform: rotate(45deg);
+    transition: 0.25s cubic-bezier(.3,-0.1,.4,1.8)
+}
+.container a:hover::before
+{
+    left: -15%;
+    top: -10%;
 }
