@@ -32,6 +32,8 @@ body
     height: 100%;
     background-color: #fff;
     object-fit: cover;
+    opacity: 0;
+    transition: 0.5s;
 }
 .container .slider .slider-box img
 {
@@ -42,6 +44,7 @@ body
 .container .slider .slider-box.active
 {
     z-index: 1;
+    opacity: 1;
 }
 .container .icon
 {

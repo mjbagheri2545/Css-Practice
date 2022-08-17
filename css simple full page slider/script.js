@@ -31,3 +31,9 @@ function increaseImageActiveIndex(){
     }
     imageActiveIndex +=1;
 }
+
+setInterval(()=>{
+    imageBoxs[imageActiveIndex].classList.remove('active');
+    increaseImageActiveIndex();
+    imageBoxs[imageActiveIndex].classList.add('active');
+},4000);
